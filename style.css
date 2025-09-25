@@ -1,0 +1,346 @@
+/* Variables de colores y tipografías */
+:root {
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --white: hsl(0, 0%, 100%);
+    --dark-desaturated-cyan-graphic: hsl(167, 40%, 24%); 
+    --dark-blue-photography: hsl(198, 62%, 26%);
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+    --dark-desaturated-cyan-graphic: hsl(167, 40%, 24%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-fraunces: 'Fraunces', serif;
+    --font-barlow: 'Barlow', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-barlow);
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-image: url('assets/mobile/image-header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    height: 538px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__logo {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: var(--font-barlow);
+    font-weight: 700;
+}
+
+.header__menu-toggle {
+    background: none;
+    border: none;
+    width: 24px;
+    height: 18px;
+    background-image: url('assets/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.header__title {
+    font-family: var(--font-fraunces);
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.header__arrow-down {
+    margin-bottom: 2rem;
+}
+
+/* Estilos para la primera sección */
+.section__image-wrapper {
+    /* La imagen del huevo que ya se ajusta al ancho */
+    max-width: 100%;
+}
+
+.section__image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section__content-wrapper {
+    /* Aún necesitamos un padding para el texto */
+    padding: 4rem 1.5rem; /* Ajusta el padding superior e inferior */
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section__title {
+    font-family: var(--font-fraunces);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--very-dark-desaturated-blue);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.section__text {
+    font-family: var(--font-barlow);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-grayish-blue);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.section__link {
+    font-family: var(--font-fraunces);
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--very-dark-desaturated-blue);
+    position: relative;
+    padding-bottom: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.section__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8px;
+    background-color: var(--yellow);
+    border-radius: 5px;
+    opacity: 0.3;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.section__link:hover::after {
+    opacity: 1;
+}
+
+/* Estilos para la sección "Graphic Design" */
+.section--graphic-design {
+    /* Añadimos la imagen de fondo con la ruta correcta para móvil */
+    background-image: url('assets/mobile/image-graphic-design.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    
+    height: 600px; /* **Importante:** Dale una altura fija para que la imagen de fondo sea visible */
+    display: flex; /* Para centrar el contenido verticalmente */
+    flex-direction: column; /* Apila el contenido verticalmente */
+    justify-content: flex-end; /* Alinea el contenido al final (inferior) */
+    align-items: center; /* Centra el contenido horizontalmente */
+    
+    padding-bottom: 4rem; /* Espacio debajo del contenido de texto */
+    color: var(--dark-desaturated-cyan-graphic); /* Color del texto para esta sección */
+}
+
+.section--graphic-design .section__content-wrapper {
+    padding: 0 1.5rem; /* Ajusta el padding horizontal si es necesario */
+    max-width: 500px; /* Para que el texto no se extienda demasiado en pantallas anchas */
+    margin: 0 auto; /* Centra el contenido */
+    text-align: center; /* Centra el texto */
+}
+
+.section--graphic-design .section__title {
+    font-family: var(--font-fraunces);
+    font-size: 2rem; /* Tamaño de fuente para el título */
+    font-weight: 900;
+    color: inherit; /* Hereda el color del padre (.section--graphic-design) */
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.section--graphic-design .section__text {
+    font-family: var(--font-barlow);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: inherit; /* Hereda el color del padre */
+    line-height: 1.6;
+    margin-bottom: 0; /* No necesitamos margen inferior si ya tenemos padding-bottom en la sección */
+    padding: 0 1rem; /* Pequeño padding a los lados */
+}
+.section--photography {
+    /* Agregamos la imagen de fondo con la ruta correcta para móvil */
+    background-image: url('../assets/mobile/image-photography.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+    height: 600px; /* **Importante:** Dale una altura fija para que la imagen sea visible */
+    display: flex; /* Para centrar el contenido verticalmente */
+    flex-direction: column; /* Apila el contenido verticalmente */
+    justify-content: flex-end; /* Alinea el contenido en la parte inferior */
+    align-items: center; /* Centra el contenido horizontalmente */
+
+    padding-bottom: 4rem; /* Espacio debajo del texto */
+    color: var(--dark-blue-photography); /* Color del texto para esta sección */
+}
+
+.section--photography .section__content-wrapper {
+    padding: 0 1.5rem; /* Ajusta el padding horizontal si es necesario */
+    max-width: 500px; /* Evita que el texto se extienda demasiado en pantallas anchas */
+    margin: 0 auto; /* Centra el contenedor */
+    text-align: center; /* Centra el texto */
+}
+
+.section--photography .section__title {
+    font-family: var(--font-fraunces);
+    font-size: 2rem;
+    font-weight: 900;
+    color: inherit; /* Hereda el color del padre (.section--photography) */
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.section--photography .section__text {
+    font-family: var(--font-barlow);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: inherit; /* Hereda el color del padre */
+    line-height: 1.6;
+    margin-bottom: 0;
+    padding: 0 1rem;
+}
+.testimonials {
+    text-align: center; /* Centra todo el contenido de la sección */
+    padding: 4rem 1.5rem; /* Padding general para el espacio de los lados y arriba/abajo */
+}
+
+.testimonials__title {
+    font-family: var(--font-fraunces);
+    font-size: 1rem;
+    letter-spacing: 4px; /* Espaciado entre letras para que se vea como en el Figma */
+    color: var(--grayish-blue); /* Color gris claro del título */
+    margin-bottom: 3rem; /* Espacio entre el título y el primer testimonial */
+    text-transform: uppercase; /* El título está en mayúsculas */
+}
+
+.testimonial-card {
+    margin-bottom: 4rem; /* Espacio entre cada tarjeta de testimonial */
+}
+
+.testimonial-card__image {
+    width: 70px;
+    height: 70px; /* Asegura que la imagen sea un círculo perfecto */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-bottom: 2rem; /* Espacio entre la imagen y el texto del testimonial */
+}
+
+.testimonial-card__text {
+    color: var(--very-dark-grayish-blue); /* Color del texto principal del testimonial */
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 2rem; /* Espacio entre el texto del testimonial y el nombre */
+    font-family: var(--font-barlow);
+    font-size: 1.1rem;
+    padding: 0 1rem; /* Pequeño padding para que el texto no toque los bordes en móviles */
+}
+
+.testimonial-card__name {
+    font-family: var(--font-fraunces);
+    color: var(--very-dark-desaturated-blue); /* Color del nombre */
+    font-weight: 900;
+    margin-bottom: 0.5rem; /* Espacio entre el nombre y el puesto */
+}
+
+.testimonial-card__position {
+    color: var(--grayish-blue); /* Color gris del puesto */
+    font-size: 0.9rem;
+    font-family: var(--font-barlow);
+    font-weight: 600;
+}
+.gallery {
+    display: grid; /* Usamos CSS Grid para crear la cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas de igual tamaño */
+    width: 100%; /* Asegura que la galería ocupe todo el ancho */
+}
+
+.gallery__image {
+    width: 100%; /* Cada imagen ocupará el 100% de su celda en la cuadrícula */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block;
+}
+.footer {
+    background-color: var(--dark-moderate-cyan-footer);
+    padding: 4rem 1.5rem; /* Espaciado interno para el contenido */
+    display: flex; /* Usamos Flexbox para organizar el contenido */
+    flex-direction: column; /* Apilamos los elementos verticalmente: logo, links, íconos */
+    align-items: center; /* Centramos todo el contenido horizontalmente */
+    text-align: center; /* Centramos el texto dentro de los elementos */
+}
+
+.footer__logo {
+    color: var(--dark-desaturated-cyan-graphic);
+    text-decoration: none;
+    font-family: var(--font-barlow);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem; /* Espacio debajo del logo */
+}
+
+.footer__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Usamos Flexbox para los enlaces de navegación */
+    gap: 2rem; /* Espacio entre los elementos de la lista */
+    margin-bottom: 3rem; /* Espacio entre la navegación y los íconos */
+}
+
+.footer__nav-link {
+    color: var(--dark-desaturated-cyan-graphic);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave para el efecto hover */
+    font-family: var(--font-barlow);
+    font-size: 1.1rem;
+}
+
+.footer__nav-link:hover {
+    color: var(--white); /* El color cambia al pasar el cursor */
+}
+
+.footer__socials {
+    display: flex; /* Usamos Flexbox para los íconos sociales */
+    gap: 1.5rem; /* Espacio entre cada ícono */
+}
+
+.footer__social-icon {
+    /* Aquí puedes añadir estilos si es necesario, como el tamaño */
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease; /* Transición para un efecto sutil al pasar el cursor */
+}
+
+.footer__social-icon:hover {
+    transform: translateY(-3px); /* Efecto de "salto" al pasar el cursor */
+}
