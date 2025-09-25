@@ -1,18 +1,18 @@
 /* Variables de colores y tipografías */
 :root {
-    --soft-red: hsl(7, 99%, 70%);
-    --yellow: hsl(51, 100%, 49%);
-    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --soft-red: #FE7766;
+    --yellow: #FAD400;
+    --very-dark-desaturated-blue: #24554A;
     --white: hsl(0, 0%, 100%);
-    --dark-desaturated-cyan-graphic: hsl(167, 40%, 24%); 
+    --dark-desaturated-cyan-graphic: #052C3B; 
     --dark-blue-photography: hsl(198, 62%, 26%);
     --very-dark-desaturated-blue: hsl(212, 27%, 19%);
     --very-dark-grayish-blue: hsl(213, 9%, 39%);
-    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --dark-grayish-blue: #3E7467;
     --grayish-blue: hsl(210, 4%, 67%);
     --dark-moderate-cyan-footer: hsl(168, 34%, 41%);
     --dark-desaturated-cyan-graphic: hsl(167, 40%, 24%);
-    --white: hsl(0, 0%, 100%);
+    --white: #FFFFFF;
 
     --font-fraunces: 'Fraunces', serif;
     --font-barlow: 'Barlow', sans-serif;
@@ -76,6 +76,14 @@ body {
 .header__arrow-down {
     margin-bottom: 2rem;
 }
+/* Estilos globales para la versión móvil */
+.header__nav {
+    display: none; /* La navegación de escritorio está oculta por defecto */
+}
+
+.header__menu-toggle {
+    display: block; /* El botón es visible por defecto */
+}
 
 /* Estilos para la primera sección */
 .section__image-wrapper {
@@ -90,7 +98,6 @@ body {
 }
 
 .section__content-wrapper {
-    /* Aún necesitamos un padding para el texto */
     padding: 4rem 1.5rem; /* Ajusta el padding superior e inferior */
     max-width: 500px;
     margin: 0 auto;
@@ -119,7 +126,7 @@ body {
     font-family: var(--font-fraunces);
     text-decoration: none;
     font-weight: 900;
-    color: var(--very-dark-desaturated-blue);
+    color: var(--Grey-950);
     position: relative;
     padding-bottom: 5px;
     display: inline-block;
@@ -361,8 +368,6 @@ body {
         font-size: 3.5rem; /* Larger font size for the title */
     }
 
-    /* You may also need to adjust the rest of the sections */
-    /* for the tablet layout, but start with the header. */
     .section__content-wrapper {
         padding: 4rem 3rem;
     }
@@ -377,5 +382,157 @@ body {
 
     .testimonial-card__text {
         padding: 0 3rem;
+    }
+}
+@media (min-width: 1024px) {
+
+    /* --- NAVEGACIÓN DESKTOP --- */
+    /* Asegúrate de que este bloque sea el único para la navegación de escritorio */
+    .header__nav {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+    }
+    .header__menu-toggle {
+        display: none;
+    }
+
+    .header__nav-link {
+        color: var(--white);
+        text-decoration: none;
+        font-family: var(--font-barlow);
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+    }
+
+    .header__nav-link:hover {
+        color: var(--white);
+    }
+
+    .header__nav-contact {
+        background-color: var(--white);
+        color: var(--very-dark-desaturated-blue);
+        font-family: var(--font-fraunces);
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header__nav-contact:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: var(--white);
+    }
+    /* --- FIN NAVEGACIÓN DESKTOP --- */
+
+
+    /* --- HEADER --- */
+    .header {
+        height: 800px;
+        background-image: url('../assets/desktop/image-header.jpg');
+        background-position: center bottom;
+    }
+
+    .header__top {
+        padding: 0 2.5rem;
+    }
+
+    .header__logo {
+        font-size: 2rem;
+    }
+
+    .header__title {
+        font-size: 4rem;
+        margin-top: 5rem;
+    }
+
+    .header__arrow-down {
+        margin-bottom: 2rem;
+    }
+
+    /* --- SECCIONES PRINCIPALES (TRANSFORM Y STAND-OUT) --- */
+    .section--transform {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section--stand-out {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .section__content-wrapper {
+        padding: 0;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        padding: 0 4rem;
+    }
+
+    .section__title {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .section__text {
+        text-align: left;
+        max-width: 445px;
+    }
+
+    .section__link {
+        text-align: left;
+        margin-top: 1.5rem;
+    }
+
+    .section__image-wrapper {
+        width: 50%;
+    }
+
+    .section__image {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    /* --- SECCIONES DE CONTENIDO (GRAPHIC DESIGN Y PHOTOGRAPHY) --- */
+    .split-sections {
+        display: flex;
+        flex-direction: row; /* Coloca los elementos en una fila */
+    }
+    
+    .section--graphic-design,
+    .section--photography {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 600px;
+        width: 50%;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .section--graphic-design {
+        background-image: url('assets/desktop/image-graphic-design.jpg');
+        color: var(--dark-desaturated-cyan-graphic);
+    }
+    
+    .section--photography {
+        background-image: url('assets/desktop/image-photography.jpg');
+        color: var(--dark-blue-photography);
+    }
+    
+    .section--graphic-design .section__content-wrapper,
+    .section--photography .section__content-wrapper {
+        padding-bottom: 3.5rem;
+    }
+    
+    .section--graphic-design .section__title,
+    .section--photography .section__title {
+        font-size: 2rem;
     }
 }
