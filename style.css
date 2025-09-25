@@ -344,3 +344,38 @@ body {
 .footer__social-icon:hover {
     transform: translateY(-3px); /* Efecto de "salto" al pasar el cursor */
 }
+@media (min-width: 768px) {
+    /* Header */
+    .header {
+        background-image: url('assets/desktop/image-header.jpg');
+        background-position: center bottom;
+        height: 600px; /* Adjust height for tablet */
+        padding: 2rem 3rem; /* Add horizontal padding */
+    }
+
+    .header__top {
+        padding: 0 1rem;
+    }
+
+    .header__title {
+        font-size: 3.5rem; /* Larger font size for the title */
+    }
+
+    /* You may also need to adjust the rest of the sections */
+    /* for the tablet layout, but start with the header. */
+    .section__content-wrapper {
+        padding: 4rem 3rem;
+    }
+
+    .section__title {
+        font-size: 2.5rem;
+    }
+
+    .testimonials {
+        padding: 4rem 3rem;
+    }
+
+    .testimonial-card__text {
+        padding: 0 3rem;
+    }
+}
