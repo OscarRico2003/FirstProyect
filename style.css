@@ -191,7 +191,7 @@ body {
 }
 .section--photography {
     /* Agregamos la imagen de fondo con la ruta correcta para móvil */
-    background-image: url('../assets/mobile/image-photography.jpg');
+    background-image: url('assets/mobile/image-photography.jpg');
     background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
